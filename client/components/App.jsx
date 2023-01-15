@@ -105,6 +105,9 @@ function App() {
     winnerStatus = `The more popular artist is ${playerAnswers[1].name}`
   } else if (winner === 3) {
     winnerStatus = `The artists are equally popular!`
+    if (form.playerOne === form.playerTwo) {
+      winnerStatus = `You have chosen the same artist`
+    }
   }
 
   function handleChange(e) {
